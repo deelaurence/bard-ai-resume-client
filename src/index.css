@@ -51,6 +51,12 @@ button {
   margin-bottom: 30px;
 }
 
+.nestedContainer-1 {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 .nestedContainer {
   display: flex;
   align-items: center;
