@@ -4,11 +4,11 @@ import Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
 const Home = ({setResult}) => {
     const navigate = useNavigate()
-    const [fullName, setFullName] = useState("John Doe");
-    const [currentPosition, setCurrentPosition] = useState("Carpenter");
-    const [currentLength, setCurrentLength] = useState(1);
-    const [currentTechnologies, setCurrentTechnologies] = useState("Latin Woods");
-    const [companyInfo, setCompanyInfo] = useState([{ name: "Wince now", position: "Wood Analyzer" }]);
+    const [fullName, setFullName] = useState("");
+    const [currentPosition, setCurrentPosition] = useState("");
+    const [currentLength, setCurrentLength] = useState(0);
+    const [currentTechnologies, setCurrentTechnologies] = useState("");
+    const [companyInfo, setCompanyInfo] = useState([{ name: "", position: "" }]);
     const [headshot, setHeadshot] = useState(null);
     const [loading, setLoading] = useState(false);
     //👇🏻 updates the state with user's input
@@ -59,6 +59,8 @@ const handleFormSubmit = (e) => {
     if (loading) {
         return <Loading />;
     }
+
+
     return (
         <div className='app'>
             <h1>Resume Builder</h1>
